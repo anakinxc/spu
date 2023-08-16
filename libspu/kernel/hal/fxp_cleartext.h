@@ -31,4 +31,6 @@ Value f_exp_p(SPUContext* ctx, const Value& in);
 
 Value f_div_p(SPUContext* ctx, const Value& x, const Value& y);
 
+Value f_sine_p(SPUContext* ctx, const Value& x);
+
 }  // namespace spu::kernel::hal

@@ -24,6 +24,7 @@
 #include "libspu/kernel/hal/fxp_cleartext.h"
 #include "libspu/kernel/hal/ring.h"
 #include "libspu/kernel/hal/shape_ops.h"
+#include "libspu/kernel/hal/type_cast.h"
 
 namespace spu::kernel::hal {
 namespace detail {
@@ -613,6 +614,20 @@ Value f_sigmoid(SPUContext* ctx, const Value& x) {
       SPU_THROW("Should not hit");
     }
   }
+}
+
+Value f_sine(SPUContext* ctx, const Value& x) {
+  SPU_TRACE_HAL_DISP(ctx, x);
+
+  SPU_ENFORCE(x.isFxp());
+
+  if (x.isPublic()) {
+    return f_sine_p(ctx, x);
+  }
+
+  // FIXME: This is a hack...replace with a proper approximate for secret input
+  auto p_x = reveal(ctx, x);
+  return seal(ctx, f_sine_p(ctx, p_x));
 }
 
 }  // namespace spu::kernel::hal

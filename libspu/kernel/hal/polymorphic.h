@@ -212,4 +212,8 @@ Value sqrt(SPUContext* ctx, const Value& x);
 // @param in, the input value
 Value sign(SPUContext* ctx, const Value& x);
 
+/// element-wise sine operation
+// @param in, the input value
+Value sine(SPUContext* ctx, const Value& x);
+
 }  // namespace spu::kernel::hal

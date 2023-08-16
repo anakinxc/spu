@@ -101,4 +101,9 @@ Value f_div_p(SPUContext* ctx, const Value& x, const Value& y) {
                               [](float a, float b) { return a / b; });
 }
 
+Value f_sine_p(SPUContext* ctx, const Value& in) {
+  SPU_TRACE_HAL_DISP(ctx, in);
+  return applyFloatingPointFn(ctx, in, [](float x) { return std::sin(x); });
+}
+
 }  // namespace spu::kernel::hal

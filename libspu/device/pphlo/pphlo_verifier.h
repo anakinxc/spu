@@ -53,6 +53,7 @@ class PPHloVerifier {
   VERIFY_DECL(ExpOp)
   VERIFY_DECL(Expm1Op)
   VERIFY_DECL(RsqrtOp)
+  VERIFY_DECL(SineOp)
   VERIFY_DECL(SignOp)
   VERIFY_DECL(SqrtOp)
   VERIFY_DECL(RoundOp)

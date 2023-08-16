@@ -269,6 +269,7 @@ UNARY_VERIFIER(RsqrtOp, evalRsqrtOp)
 UNARY_VERIFIER(SqrtOp, evalSqrtOp)
 UNARY_VERIFIER(RoundOp, evalRoundOp)
 UNARY_VERIFIER(SignOp, evalSignOp)
+UNARY_VERIFIER(SineOp, evalSineOp)
 UNARY_VERIFIER(Log1pOp, evalLog1pOp)
 UNARY_VERIFIER(Expm1Op, evalExpm1Op)
 

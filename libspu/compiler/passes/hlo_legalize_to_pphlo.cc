@@ -1407,6 +1407,7 @@ private:
         HloToPPHloOpConverter<stablehlo::RoundOp>,
         HloToPPHloOpConverter<stablehlo::ReverseOp>,
         HloToPPHloOpConverter<stablehlo::RngOp>,
+        HloToPPHloOpConverter<stablehlo::SineOp>,
         HloToPPHloOpConverter<stablehlo::SelectOp>,
         HloToPPHloOpConverter<stablehlo::SelectAndScatterOp>,
         HloToPPHloOpConverter<stablehlo::ShiftLeftOp>,
